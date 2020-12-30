@@ -1,0 +1,13 @@
+*{
+    box-sizing: border-box;
+    
+}
+
+body {
+    font-size: 18px;
+}
+
+.jumbo {
+    padding-top: 1px;
+    padding-bottom: 1px;
+}

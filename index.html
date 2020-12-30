@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>Weather Dashboard</title>
+</head>
+
+<body>
+
+    <div class="jumbotron text-center bg-dark text-white jumbo">
+        <h1> Weater Dashboard </h1>
+    </div>
+
+    <div class="container">
+
+        <div class="row">
+            <div class="col-sm-4 bg-light">
+                <h2 >Search for a City:</h2>
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" placeholder="Input City Here" aria-label="City Search"
+                        aria-describedby="basic-addon2">
+                    <div class="input-group-append">
+                        <button class="btn btn-primary" type="button">Search</button>
+                    </div>
+                </div>
+                <button class=" btn btn-primary" type="button" id="clear-history">Clear history</button>
+                <ul class="list-group">
+
+                </ul>
+            </div>
+        </div>
+        <div class="col-sm-8">
+            <div class="row ml-2 border border-dark rounded">
+                <div class="col-sm-12">
+                    <h3 class="mb-1 mt-2 bolder">City Name</h3>
+                    <p>Temperature:<span ></span></p>
+                    <p>Humidity:<span></span></p>
+                    <p>Wind Speed: <span></span></p>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-12">
+            <h3>5-Day Forecast:</h3>
+            <div class="row text-light spacing">
+                <div class="col-sm-2 bg-primary text-white ml-2 mb-3 p-2 mt-2 rounded">
+                    <p></p>
+                    <p></p>
+                    <p>Temp:<span></span></p>
+                    <p>Humidity:<span></span></p>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+
+</body>
+
+</html>
