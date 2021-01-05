@@ -20,12 +20,13 @@
 
         <div class="row">
             <div class="col-sm-4 bg-light">
-                <h2 >Search for a City:</h2>
+                <h2>Search for a City:</h2>
                 <div class="input-group mb-3">
-                    <input type="text" class="form-control" id="search-city" placeholder="Input City Here" aria-label="City Search"
-                        aria-describedby="basic-addon2">
+                    <input type="text" class="form-control" id="search-city" placeholder="Input City Here"
+                        aria-label="City Search" aria-describedby="basic-addon2">
                     <div class="input-group-append">
-                        <submit class="btn btn-primary" type="submit" id="search-button" onclick="getWeather()">Search</submit>
+                        <submit class="btn btn-primary" type="submit" id="search-button" onclick="getWeather()">Search
+                        </submit>
                     </div>
                 </div>
                 <button class=" btn btn-primary" type="button" id="clear-history">Clear history</button>
@@ -33,61 +34,63 @@
 
                 </ul>
             </div>
-        </div>
-        <div class="col-sm-8">
-            <div class="row ml-2 border border-dark rounded">
+
+            <div class="col-sm-8">
+                <div class="row ml-2 border border-dark rounded">
+                    <div class="col-sm-12">
+                        <h3 class="mb-1 mt-2 bolder" id="current-city"></h3>
+                        <p>Temperature:<span id="city-temp"></span>°F</p>
+                        <p>Humidity:<span id="city-humid"></span>%</p>
+                        <p>Wind Speed: <span id="city-ws"></span>MPH</p>
+                    </div>
+                </div>
+
                 <div class="col-sm-12">
-                    <h3 class="mb-1 mt-2 bolder" id="current-city"></h3>
-                    <p>Temperature:<span id="city-temp"></span>°F</p>
-                    <p>Humidity:<span id="city-humid"></span>%</p>
-                    <p>Wind Speed: <span id="city-ws"></span>MPH</p>
+                    <h3>5-Day Forecast:</h3>
+                    <div class="row text-light spacing">
+                        <div class="col-sm-2 bg-primary text-white ml-2 mb-3 p-2 mt-2 rounded">
+                            <p></p>
+                            <p></p>
+                            <p>Temp:<span></span></p>
+                            <p>Humidity:<span></span></p>
+                        </div>
+
+                        <div class="col-sm-2 bg-primary text-white ml-2 mb-3 p-2 mt-2 rounded">
+                            <p></p>
+                            <p></p>
+                            <p>Temp:<span></span></p>
+                            <p>Humidity:<span></span></p>
+                        </div>
+
+                        <div class="col-sm-2 bg-primary text-white ml-2 mb-3 p-2 mt-2 rounded">
+                            <p></p>
+                            <p></p>
+                            <p>Temp:<span></span></p>
+                            <p>Humidity:<span></span></p>
+                        </div>
+
+                        <div class="col-sm-2 bg-primary text-white ml-2 mb-3 p-2 mt-2 rounded">
+                            <p></p>
+                            <p></p>
+                            <p>Temp:<span></span></p>
+                            <p>Humidity:<span></span></p>
+                        </div>
+
+                        <div class="col-sm-2 bg-primary text-white ml-2 mb-3 p-2 mt-2 rounded">
+                            <p></p>
+                            <p></p>
+                            <p>Temp:<span></span></p>
+                            <p>Humidity:<span></span></p>
+                        </div>
+
+                    </div>
                 </div>
             </div>
+
         </div>
-        <div class="col-sm-12">
-            <h3>5-Day Forecast:</h3>
-            <div class="row text-light spacing">
-                <div class="col-sm-2 bg-primary text-white ml-2 mb-3 p-2 mt-2 rounded">
-                    <p></p>
-                    <p></p>
-                    <p>Temp:<span></span></p>
-                    <p>Humidity:<span></span></p>
-                </div>
-
-                <div class="col-sm-2 bg-primary text-white ml-2 mb-3 p-2 mt-2 rounded">
-                    <p></p>
-                    <p></p>
-                    <p>Temp:<span></span></p>
-                    <p>Humidity:<span></span></p>
-                </div>
-
-                <div class="col-sm-2 bg-primary text-white ml-2 mb-3 p-2 mt-2 rounded">
-                    <p></p>
-                    <p></p>
-                    <p>Temp:<span></span></p>
-                    <p>Humidity:<span></span></p>
-                </div>
-
-                <div class="col-sm-2 bg-primary text-white ml-2 mb-3 p-2 mt-2 rounded">
-                    <p></p>
-                    <p></p>
-                    <p>Temp:<span></span></p>
-                    <p>Humidity:<span></span></p>
-                </div>
-
-                <div class="col-sm-2 bg-primary text-white ml-2 mb-3 p-2 mt-2 rounded">
-                    <p></p>
-                    <p></p>
-                    <p>Temp:<span></span></p>
-                    <p>Humidity:<span></span></p>
-                </div>
-
-            </div>
-        </div>
-
     </div>
 
-    <script src="./assets/js/script.js"></script>
+        <script src="./assets/js/script.js"></script>
 </body>
 
 </html>
