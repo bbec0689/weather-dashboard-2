@@ -29,8 +29,9 @@
                         </submit>
                     </div>
                 </div>
-                <button class=" btn btn-primary" type="button" id="clear-history">Clear history</button>
-                <ul class="list-group">
+                <button class=" btn btn-primary" type="button" id="clear-history" onclick="clearHistory()">Clear history</button>
+                <ul class="list-group" id="list-city" onclick="getCityLast()">
+                    
 
                 </ul>
             </div>
@@ -58,29 +59,29 @@
                         <div class="col-sm-2 bg-primary text-white ml-2 mb-3 p-2 mt-2 rounded">
                             <p></p>
                             <p></p>
-                            <p>Temp:</br><span></span></p>
-                            <p>Humidity:</br><span></span></p>
+                            <p>Temp:</br><span id="forecast-temp1"></span></p>
+                            <p>Humidity:</br><span id="forecast-humid1"></span></p>
                         </div>
 
                         <div class="col-sm-2 bg-primary text-white ml-2 mb-3 p-2 mt-2 rounded">
                             <p></p>
                             <p></p>
-                            <p>Temp:</br><span></span></p>
-                            <p>Humidity:</br><span></span></p>
+                            <p>Temp:</br><span id="forecast-temp2"></span></p>
+                            <p>Humidity:</br><span id="forecast-humid2"></span></p>
                         </div>
 
                         <div class="col-sm-2 bg-primary text-white ml-2 mb-3 p-2 mt-2 rounded">
                             <p></p>
                             <p></p>
-                            <p>Temp:</br><span></span></p>
-                            <p>Humidity:</br><span></span></p>
+                            <p>Temp:</br><span id="forecast-temp3"></span></p>
+                            <p>Humidity:</br><span id="forecast-humid3"></span></p>
                         </div>
 
                         <div class="col-sm-2 bg-primary text-white ml-2 mb-3 p-2 mt-2 rounded">
                             <p></p>
                             <p></p>
-                            <p>Temp:</br><span></span></p>
-                            <p>Humidity:</br><span></span></p>
+                            <p>Temp:</br><span id="forecast-temp4"></span></p>
+                            <p>Humidity:</br><span id="forecast-humid4"></span></p>
                         </div>
 
                     </div>
@@ -89,7 +90,7 @@
 
         </div>
     </div>
-
+    <script src="https://code.jquery.com/jquery.js"></script>
         <script src="./assets/js/script.js"></script>
 </body>
 

@@ -12,3 +12,16 @@ body {
     padding-bottom: 1px;
 }
 
+.list-item {
+    background-color: lightgray;
+    text-align: center;
+    cursor: pointer;
+    font-weight: bold;
+    border: solid white 3px;
+    border-radius: 2px;
+}
+
+.list-item:hover {
+    background-color: lightskyblue;
+    text-decoration: underline;
+}
