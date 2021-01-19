@@ -41,36 +41,17 @@ function getWeather() {
 
         .then(function (data) {
             // localStorage.setItem(data.name, JSON.stringify(data));
+            getCityLast(data)
             getCity(data);
             getTemp(data);
             getWS(data);
             getHumid(data)
             getForecast(data)
-            getCityLast(data)
+            
         })
     
 }
-
-// function getHistory() {
-
-//     var inputElement = document.getElementById('list-city').innerText
-//     console.log(inputElement)
-//     var searchCity = inputElement.innerHTML;
-//     console.log(searchCity)
-
-//     fetch(
-//         'https://api.openweathermap.org/data/2.5/weather?q=' + searchCity + '&units=imperial&appid=64a50eda68eb7a2b92c0bc02b65b4593'
-//         )
-
-//         .then(function (response) {
-
-//             return response.json();
-//         })
-//         .then(function (data) {
-//             getCityLast(data)
-//         })
-//     }
-
+//Creating function to append last city searched in history section
 function getCityLast(data) {
     var saveCity = data.name
     var saveCityDiv = document.createElement('button')
@@ -82,21 +63,14 @@ function getCityLast(data) {
 
     localStorage.setItem(data.name, JSON.stringify(data));
 
-    console.log(localStorage.key(data))
-
-    for (let i = 0; i < localStorage.length; i++) {
-        var key = localStorage.key(i)
-
-        getLastCity.saveCityDiv += `${key}`
-    }
 }
 
-
+//clear history and local storage
 function clearHistory(data) {
     localStorage.clear(data);
     document.location.reload()
 }
-//Colllecting data for the current day
+//Collecting data for the current day
 
 function getCity(data) {
     var cityName = data.name
@@ -106,7 +80,7 @@ function getCity(data) {
     var item = document.getElementById("current-city");
     item.replaceChild(cityNameText, item.childNodes[0]);
 }
-
+// Get Temperature
 function getTemp(data) {
     var cityTemp = data.main.temp
     var cityTempText = document.createTextNode(cityTemp + "°F")
@@ -115,7 +89,7 @@ function getTemp(data) {
     var item = document.getElementById("city-temp");
     item.replaceChild(cityTempText, item.childNodes[0]);
 }
-
+//Get Humidity
 function getHumid(data) {
     var cityHumid = data.main.humidity
     var cityHumidText = document.createTextNode(cityHumid + "%")
@@ -124,7 +98,7 @@ function getHumid(data) {
     var item = document.getElementById("city-humid");
     item.replaceChild(cityHumidText, item.childNodes[0]);
 }
-
+//Get wind speed
 function getWS(data) {
     var cityWS = data.wind.speed
     var cityWSText = document.createTextNode(cityWS + "MPH")
@@ -259,4 +233,20 @@ function getHumid5 (data) {
 
 //End 5 day forecast
 
+//Local storage append to page
+function onLoad (){
+    
+    for (let i = 0; i < localStorage.length; i++) {
+        const saveKey = localStorage.key(i)
+        var saveKeyDiv = document.createElement('button')
+    
+        saveKeyDiv.classList.add('list-item')
+        var keyText = document.createTextNode(saveKey)
 
+        saveKeyDiv.appendChild(keyText)
+        getLastCity.appendChild(saveKeyDiv)
+    }
+
+}
+
+onLoad()
